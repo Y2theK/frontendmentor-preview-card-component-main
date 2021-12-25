@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit");
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        background-color: hsl(217, 54%, 11%);
+        font-size: 18px;
+        font-family: "Outfit", sans-serif;
+      }
+      .container {
+        background-color: hsl(216, 50%, 16%);
+        width: 420px;
+        height: 100vh;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        padding: 10px 30px;
+        margin: 10px 0;
+      }
+      .card-image {
+        position: relative;
+
+        margin: 20px auto;
+        border-radius: 10px;
+
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .card-image img.c-img {
+        width: 100%;
+        height: 100%;
+      }
+      .card-image .c-view {
+        z-index: 1;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        place-items: center;
+
+        background-color: cyan;
+        opacity: 0;
+      }
+
+      .container h1 {
+        color: hsl(0, 0%, 100%);
+        font-size: 1.7rem;
+        font-weight: 600;
+
+        margin-top: 30px;
+        cursor: pointer;
+      }
+      .container p {
+        color: hsl(215, 51%, 70%);
+
+        font-weight: 400;
+        margin-top: 20px;
+      }
+
+      .status {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        color: hsl(215, 51%, 70%);
+
+        font-weight: 400;
+        margin: 20px 0;
+      }
+      .status div {
+        display: flex;
+        align-items: center;
+      }
+      .status div img {
+        margin-right: 5px;
+      }
+
+      .status div:nth-child(1) {
+        color: cyan;
+      }
+
+      hr {
+        border-color: hsl(215, 32%, 27%);
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+      }
+      .footer img {
+        width: 50px;
+        height: 50px;
+        border: 2px solid hsl(0, 0%, 100%);
+        border-radius: 50%;
+        margin-right: 30px;
+      }
+      .footer p:nth-child(2) {
+        font-size: 16px;
+        font-weight: 300;
+      }
+      .footer span {
+        color: hsl(0, 0%, 100%);
+        font-weight: 300;
+        cursor: pointer;
+      }
+
+      /* hover */
+      .card-image:hover .c-view {
+        opacity: 0.6;
+      }
+      .container h1:hover,
+      .footer span:hover {
+        color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-image">
+        <img src="images/image-equilibrium.jpg" alt="" class="c-img" />
+        <div class="c-view">
+          <img src="images/icon-view.svg" alt="" />
+        </div>
+      </div>
+
+      <h1>Equilibrium #3429</h1>
+
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="status">
+        <div><img src="images/icon-ethereum.svg" alt="" /> 0.041 ETH</div>
+        <div><img src="images/icon-clock.svg" alt="" /> 3 days left</div>
+      </div>
+      <hr />
+      <div class="footer">
+        <p><img src="images/image-avatar.png" alt="" /></p>
+        <p>Creation of <span> Jules Wyvern</span></p>
+      </div>
+    </div>
+
+    <div class="attribution">
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ye Yint Kyaw</a>.
+    </div>
+  </body>
+</html>
